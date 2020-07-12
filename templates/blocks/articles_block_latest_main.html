@@ -1,0 +1,13 @@
+<table>
+<{foreach item=arts from=$block.arts}>
+  <tr>
+    <td class="<{$arts.class}>">
+      <a href="<{$xoops_url}>/modules/articles/article.php?id=<{$arts.id}>"><{$arts.title}></a> 
+      <span style="font-size: smaller;">[<{$arts.art_posted_datetime}>]</span>
+      <br />
+      <{$arts.text}>
+    </td>
+  </tr>    
+<{/foreach}>
+</table>
+

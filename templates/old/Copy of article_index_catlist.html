@@ -1,0 +1,36 @@
+
+<!-- category listing on index page -->
+
+<table border="1" width="97%" align="center">
+  <tr>
+    <th><{$category_list_title}></th>
+    <!-- <th>tr</th>-->
+  </tr>
+  
+  <{foreach item=category_list from=$categories}>
+  <tr>
+    <td>
+      <{$category_list.cat_id}> <{$category_list.cat_name}><br />
+      <{$category_list.cat_description}>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <{foreach item=articlelist from=$category_list.articles_list}>
+      <table border="1" width="100%">
+        <tr>
+          <td><br /><{$articlelist.art_title}></td>
+          <td colspan="2"><br /></td>
+        </tr>
+        <tr>
+          <td><br /></td>
+          <!--<td></td>-->
+        </tr>
+      </table>
+      <{/foreach}>
+    </td>
+  </tr>
+  <{/foreach}>
+
+
+</table>

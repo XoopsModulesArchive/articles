@@ -1,0 +1,196 @@
+Updating Articles:
+
+If you are installing Articles for the first time, or are re-installing afresh,
+please disregard this file.
+
+
+Upgrading to Articles v1.03
+===========================
+
+This is a straight forward upgrade, upload the Articles folder, overwriting any 
+existing files, and upgrade the module in the modules admin area.
+
+
+Upgrading to Articles v1.02
+===========================
+
+This is a straight forward upgrade, upload the Articles folder, overwriting any 
+existing files, and upgrade the module in the modules admin area.
+
+
+Upgrading to Articles v1.01
+===========================
+
+This is a straight forward upgrade, upload the Articles folder, overwriting any 
+existing files, and upgrade the module in the modules admin area.
+
+
+Upgrading to Articles v1.0 rc2 (0.27)
+=====================================
+
+This is a straight forward upgrade, upload the Articles folder, overwriting any 
+existing files, and upgrade the module in the modules admin area.
+
+
+Upgrading to Articles v1.0 rc1 (0.26)
+=====================================
+
+This is a straight forward upgrade, upload the Articles folder, overwriting any 
+existing files, and upgrade the module in the modules admin area.
+
+
+Upgrading to v0.25
+==================
+
+There is an optional database update script (update025.php) for this release, 
+it allows for articles larger than 16kb, where large articles can get truncated 
+after being submitted. Otherwise, it's a case of upload and overwriting files as
+normal.
+
+
+Upgrading to v0.24
+==================
+
+If you are upgrading from a version prior to v0.22, follow instructions as 
+for v0.22, below.
+If upgrading from v0.22, upload new files, and over-write, then upgrade module
+in the system->modules admin as usual.
+
+
+Upgrading to v0.23
+==================
+
+If you are upgrading from a version prior to v0.22, follow instructions as 
+for v0.22, below.
+If upgrading from v0.22, upload new files, and over-write, then upgrade module
+in the system->modules admin as usual.
+
+
+Upgrading to v0.22
+==================
+
+.:IMPORTANT:.
+This release requires a database update, please run "update021.php" after the 
+module has been updated in XOOPS.
+
+Unarchive the Articles package and upload the "articles" folder and its contents
+to the modules folder in your web site, over-writing any existing files. Some of 
+the admin files have been moved/renamed/deleted, as a result, you may  want to 
+delete the existing admin folder before uploading the new files. This is not 
+totally necessary, but will save you  some web space.
+
+Go to the system admin, modules admin and update Articles. Finally, load the 
+update file, e.g., http://yourxoopssite.com/modules/articles/update021.php to 
+update the database.
+
+Because of certain code changes, some articles may not display properly - this 
+just requires that you reset the display options for these.
+
+
+Versions 0.19 - 0.21 not publically released.
+===============================================
+
+
+Upgrading to v0.17
+==================
+
+Follow instructions as per v0.16 below.
+
+
+Upgrading to v0.16
+==================
+
+If you are upgrading from v0.12, simply upload and over-write any existing 
+Articles files in your web space, then click the update icon for articles in
+the modules admin.
+
+There are no database changes for this version, so there is no update script
+to apply, unless you are upgrading from a version earlier than v0.12.  If this 
+is the case, then follow the v0.12 upgrade instructions below.
+
+
+Versions 0.13, 0.14 and 0.15 not publically released.
+=============================================== 
+
+
+Upgrading to v0.12
+==================
+
+.:IMPORTANT:.
+This version requires a database upgrade, without this, Articles will not work
+as expected! If you are installing Articles from scratch, the database upgrade 
+is not needed.
+
+Upload and over-write the existing Article module files, update it as usual in
+the admin panel, then go to:
+
+http://www.yoursitewhatever.com/modules/articles/update012.php
+
+This is a script I have written to save you the tedious task of copying all of
+your article data, uninstalling Articles v0.09 (or lower), re-installing v0.12
+and then re-entering all of your articles again.
+
+Follow the prompts and all the hard work is done for you. Articles v0.12 should
+then be updated fully.
+
+You do have an option to backup the database table that is modified, so *if* 
+anything should go wrong during the update, you can use something like 
+phpMyAdmin (http://www.phpmyadmin.net - or try the Xoops module of phpMyAdmin)
+to copy it back again. The backup table is called 
+"{prefix}_articles_main_pre012" ("{prefix}" is the prefix given to all Xoops 
+tables, you were asked for this when Xoops was installed and is usually kept 
+as "xoops").
+
+
+Upgrading to v0.09
+==================
+
+.:IMPORTANT:.
+This version requires a database upgrade, without this, Articles will not work
+as expected! If you are installing Articles from scratch, the database upgrade 
+is not needed.
+
+Upload and over-write the existing Article module files, update it as usual in
+the admin panel, then go to:
+
+http://www.yoursitewhatever.com/modules/articles/update.php
+
+This is a script I have written to save you the tedious task of copying all of
+your article data, uninstalling Articles v0.06 (or lower), re-installing v0.09
+and then re-entering all of your articles again.
+
+Follow the prompts and all the hard work is done for you. Articles v0.09 should
+then be updated fully.
+
+You do have an option to backup the database table that is modified, so *if* 
+anything should go wrong during the update, you can use something like 
+phpMyAdmin (http://www.phpmyadmin.net - or try the Xoops module of phpMyAdmin)
+to copy it back again. The backup table is called 
+"{prefix}_articles_main_pre009" ("{prefix}" is the prefix given to all Xoops 
+tables, you were asked for this when Xoops was installed and is usually kept 
+as "xoops").
+
+
+Any version to v0.08
+====================
+
+This version was not publically released, so no update info given.
+
+
+Any version to v0.07
+====================
+
+This version was not publically released, so no update info given.
+
+
+Any version to v0.06
+====================
+
+There are no database changes for this update, so it is a simple process:
+
+Simply upload and replace the Articles files on your webserver, log into your
+admin area, go to the system->modules admin page. Scroll down to where Articles
+is listed and click on the "update" icon over to the right, confirm your wish 
+to update and you are done.
+ 
+

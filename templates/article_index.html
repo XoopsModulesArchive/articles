@@ -1,0 +1,61 @@
+
+<!-- <h4 style="text-align:left;"><{$index_page_title}></h4> -->
+<table border="0" width="100%" cellspacing="1" cellpadding="0" class="outer">
+  <tr>
+    <th><{$category_list_title}></th>
+  </tr>
+
+  <!-- start category loop -->
+  <{foreach item=category from=$categories}>
+  
+  <tr>
+    <td>
+
+      <table border="0" cellspacing="2" style="width: 100%">
+        <tr>
+          <td colspan="3"  class="even" style="width: 100%">
+            <strong><a href="index.php?cat_id=<{$category.id}>"><{$category.cat_name}></a></strong>
+            <span style="font-size: smaller;">(<{$category.number_articles}> <{$number_articles_caption}>)</span>
+            <br />
+            <span style="font-size: smaller;"><{$category.cat_description}></span>
+          </td>
+        </tr>
+			
+        <!-- start article loop -->
+        <{foreach item=article from=$category.articles}>
+        <tr>
+          <td class="odd" style="width: 10px"><!-- spacer --></td>
+          <td class="odd" style="width: 80%">
+            <a href="article.php?id=<{$article.id}>"><{$article.title}></a><br />
+            <span style="font-size: smaller;"><{$article.article_description}></span>
+          </td>
+          <td class="odd" style="width: 20%">
+            <{if $index_reads eq 1}>
+              <span style="text-align: right;">[<{$article.article_views}> <{$article_views_caption}>]</span>
+            <{/if}>
+          </td>
+        </tr>
+        <{/foreach}>
+        <!-- end article loop -->
+      </table>
+
+    </td>
+  </tr>
+  <{/foreach}>
+  <!-- end category loop -->
+</table>
+
+<{if $show_pagin eq 1}>
+<table border="0" align="center" style="width:98%">
+  <tr>
+    <td><{$articles_num}> <{$articles_numstart}> <{$articles_to}> <{$articles_numend}> <{$articles_of}> <{$articles_numtotal}></td>
+    <td align="right"><{$articles_prev}> <{$articles_sep}> <{$articles_next}></td>
+  </tr>
+</table>
+<{/if}>
+
+<!-- notification -->
+<{include file='db:system_notification_select.html'}>
+<!--  end notification -->
+
+

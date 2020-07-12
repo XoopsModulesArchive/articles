@@ -1,0 +1,5 @@
+<ul>
+<{foreach item=artspop from=$block.artspop}>
+    <li> <a href="<{$xoops_url}>/modules/articles/article.php?id=<{$artspop.id}>"><{$artspop.title}></a> [<{$artspop.art_views}>]</li>
+<{/foreach}>
+</ul>

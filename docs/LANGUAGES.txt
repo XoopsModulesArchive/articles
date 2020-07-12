@@ -1,0 +1,35 @@
+LANGUAGES.txt
+
+I have allowed for the Articles module to be localised - or to be translated to
+your local language. This basically means that all captions, text and titles
+will eventually be displayed in your language.
+
+The default language for the Articles module is English as that is my primary
+language and the default for Xoops itself. And unfortunately, while I know a
+little French, I am generally useless at learning foreign languages...
+
+So, I am reliant on other people to translate the language files for me, the 
+only problem is, these will usually be out of date by the next release due the
+constant changes and updates of the module. Where this happens, I'll use the
+translation services provided by Google and Altavista (where possible) to 
+update them myself, if not, I shall use English. Unfortunately, these online
+translation services, while generally good, still leave a lot to be desired so
+grammatical errors, etc., are likely.
+
+
+If you wish to translate Articles module to your language, please first of all:
+
+ 1) Check to see if it's already been done (and maybe just needs updating?).
+ 2) Make sure you have the latest version of Articles.
+ 3) Consider obtaining the latest development version...
+ 4) Bear in mind that the files may change constantly during its development.
+ 
+
+To translate Articles to your language, go to the "languages" folder, copy the 
+folder called "english" (along with any files it contains) and rename it to the
+name of your language. Make sure that you use the English version of its name 
+and, don't use capital letters and don't use any spaces.
+ 
+Edit the files contained within your new language files  - it should (in theory)
+be fairly obvious as to what you need to change.
+   

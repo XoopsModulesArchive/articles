@@ -1,0 +1,96 @@
+
+
+<{if $noart neq 1}>
+<!-- start main article loop -->
+<{foreach item=article from=$articles}>
+<table border="0" width="100%" cellspacing="1" cellpadding="0" class="outer">
+  <tr>
+    <th><{$article.article_title}></th>
+  </tr>
+  <tr>
+    <td class="itemInfo">
+      <span style="font-style: italic; font-size: smaller;">
+        &nbsp;
+        <{if $show_art_posted eq 1}>
+          <{$posted_on}> <{$article.art_posted_datetime}> 
+        <{/if}>
+        <{if $show_art_poster eq 1}>
+          <{$art_post_by}> <a href="<{$xoops_url}>/userinfo.php?uid=<{$article.art_author_id}>"><{$article.art_author_name}></a> 
+        <{/if}>
+        <{if $show_art_reads eq 1}>
+          (<{$article.art_views}> <{$art_reads_cap}>)
+        <{/if}>
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="<{$articlebg}>">
+      <{$article.art_article_text}> 
+      
+      <{if $numpages neq 1}>
+      <table border="0" align="center" style="width: 98%">
+        <tr>
+          <td>
+            <em><{$article.pagenum}> <{$article.pageofint}> <{$article.pageof}> <{$article.pagenumint}></em>
+          </td>
+          <td style="text-align: right;">
+            <{$article.pageprev}> <strong>::</strong> <{$article.pagenext}>     
+          </td>
+        </tr>
+      </table>
+      <{/if}>
+      
+    </td>
+  </tr>
+  <tr>
+    <td height="5"><!-- spacer --></td>
+  </tr>
+  <tr>
+    <td class="itemFoot"></td>    
+  </tr>
+</table>
+<{/foreach}>
+<!-- end main article loop -->
+
+<table width="100%">
+  <tr>
+    <td colspan="3" style="text-align: center;">
+      <a href="index.php"><{$index_link_text}></a> 
+      <{if $print_allow eq 1}>
+      <strong>::</strong> 
+      <a href="print.php?id=<{$article_id}>" target="_blank"><{$print_art_link}></a>
+      <{/if}>
+      <!-- add if statement for email thingy here -->
+      <{if $email_allow eq 1}>
+      <strong>::</strong>
+      <a href="email.php?id=<{$article_id}>"><{$email_friend}></a>
+      <{/if}>
+      <!--  -->
+    </td>
+  </tr>
+</table>
+
+<!-- comments code -->
+<div style="text-align: center; padding: 3px; margin: 3px;">
+  <{$commentsnav}>
+  <{$lang_notice}>
+</div>
+
+<div style="margin: 3px; padding: 3px;">
+<!-- start comments loop -->
+<{if $comment_mode == "flat"}>
+  <{include file="db:system_comments_flat.html"}>
+<{elseif $comment_mode == "thread"}>
+  <{include file="db:system_comments_thread.html"}>
+<{elseif $comment_mode == "nest"}>
+  <{include file="db:system_comments_nest.html"}>
+<{/if}>
+<!-- end comments loop -->
+</div>
+<!-- end comments code -->
+<{/if}>
+
+<{if $noart eq 1}>
+<h4 align="center"><{$noarticle}></h4>
+<{/if}>
+

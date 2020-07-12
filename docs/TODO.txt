@@ -1,0 +1,15 @@
+ToDo list for Articles
+
+Please see http://support.sirium.net/modules/newbb/viewforum.php?forum=4 to 
+check up on the latest feature requests, or to add your own.
+
+Articles is now "feature frozen" for the release of version 1. Articles v1 will
+now only be a bug fix maintained, with new features being added to Articles v2.
+
+ o Implement ratings. (now planned for a later incarnation)
+ o Set published time to user's local timezone, rather than the server's 
+   timezone?
+ o Add function to delete articles under category when deleting category.
+ o Add sub-categories.   
+ o Remove unused columns from articles listings, depending upon listing prefs.
+ 

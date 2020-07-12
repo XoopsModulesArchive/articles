@@ -1,0 +1,8 @@
+Known Bugs for Articles
+
+Please see http://support.sirium.net/bugs/index.php?cid=2 to either check up on
+bug status, or to report a new bug. 
+
+Current bugs:
+
+

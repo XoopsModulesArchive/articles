@@ -1,0 +1,27 @@
+<script type="text/javascript" language="JavaScript">
+<!-- //begin/hide
+
+function checkfields() {
+
+	if(document.getElementById("formdata[art_title]").value.length < 3) {
+      alert("<{$form_title_alert}>");
+      return false; // 
+   }
+
+   if(document.getElementById("formdata[art_cat_id]").value == 0) {
+      alert("<{$form_category_alert}>");
+      return false; // 
+   }
+   
+	return true;
+   
+} // end function
+
+//-->
+</script>
+
+<p><{$intro_text}></p>
+
+<{$submitform}>
+
+

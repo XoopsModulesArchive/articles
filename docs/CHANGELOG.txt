@@ -1,0 +1,327 @@
+Articles History
+
+Key:
+ + Added feature.
+ - Removed.
+ ! Bug fix.
+ o General comment.
+
+ 
+Articles v1.03
+==============
+
+ o Changed article preview link in admin so that page no longer jumps back to 
+   the top when clicked.
+ o changed <? to <?php on line 103 of admin/cateddel.php.
+ ! Added some input sanitation to an SQL statement in print.php in response to a
+   vulnerability as reported at http://www.securityfocus.com/archive/1/463916 
+ o Added intval() to sanitise other numerical inputs in other files, in response
+   to the above report.
+ 
+ 
+Articles v1.02
+============== 
+
+ ! Fixed HTML and XOOPS codes display problems in main blocks.
+ o Several other mior changes.
+
+ 
+Articles v1.01
+==============
+
+ ! Made changes to submit.php, and admin forms so that WYSIWYG editors should 
+   now supported in XOOPS v2.2.* again.
+ o Added option for Koivi editor.
+ 
+
+Articles v1.0 final
+===================
+
+ o Pagination links are now hidden if the number of articles is less than the
+   limit for each page. 
+ o Fixed broken e-mail to friend feature.
+ o Added the ability to change the paths to each of the WYSIWYG editors, in the
+   preferences.
+ o Changed index view type descriptions, it seemed its purposed was "missed" by
+   some people.
+ 
+ 
+Articles v1.0 rc2 (0.27)
+======================== 
+
+ ! I forgot to include the sql code for article ordering in when I did the 
+   pagination, so this has been added again.
+ ! Changed links in admin language file to relative links, removing some code
+   that broke the Articles admin area in XOOPS 2.2.
+ 
+
+Articles v1.0 rc1 (0.26)
+======================== 
+
+ + Added pagination to collapsed index view.
+ 
+
+Articles v0.25:
+=============== 
+
+ ! Changed typo of FSK Editor to FCK Editor in options.
+ + Added option to display article title in page title.
+ o Increased width of validate & edit article preview pop-up window, and added 
+   code to allow scrollbars.
+ ! Fixed link in admin notification of new user article message pointing to 
+   wrong place, and re-worded text.
+ ! Changed art_article_text field type from TEXT to MEDIUMTEXT for the main text
+   display. The TEXT type is the most commonly used, but is limited to 64Kb and
+   it seems some people have experienced larger articles being truncated when
+   submitted. MEDIUMTEXT allows up to something like 16Mb, so is more than 
+   enough.
+  
+
+Articles v0.24:
+===============
+
+ ! Fixed bug in article and category editing where a single quote, and anything 
+   after would be cut from titles and category names.
+ ! Changed incorrect admin menu captions for edit/delete articles and categories
+ + Added an "about" page, with update and some support info, etc.
+ 
+ 
+Articles v0.23:
+===============
+
+ + Added "posted by" caption, and on/off preference.
+ + Added preference for administrator to not increment articles read value when
+   viewing articles.
+ + Added message to add articles, which will report if there are no categories
+   and present a link to add one.
+ o Cleaned up old and test code in preparation for pre-release 1. 
+ + Added "[pagebreak]" info caption to article form in admin.
+ + Added option to disable the printable version page.
+ o Changed table cell width properties for article listing in the index, to make
+   sure they all line up, no matter how long the article title is.
+ 
+
+Articles v0.22:
+=============== 
+
+ ! Fixed index read bug
+ ! Fixed number of articles for category 
+ ! Fixed couple of minor buglets
+ 
+ 
+Articles v0.21 (not released):
+==============================
+
+ ! Fixed category count not showing in index summary, when there are no
+   categories.
+ ! Fixed no articles message showing constant in article listing.
+ ! Added no categories message in categories listing
+ ! Fixed no articles to validate message.
+ ! Fixed article count for categories in main index page counting hidden 
+   articles.
+ 
+
+Articles v0.20:
+===============
+
+ o Recoded admin area, so code is cleaner (well, at least I think so! ;), and 
+   also supports some new XOOPS standards.
+ o Separated article listing and addition into separate pages, to make addition
+   of new articles easier.
+ + Added user article submission (with admin validation), along with admin
+   notification option.
+ + Added support for SPAW, HTMLEdit, fckeditor and htmlarea WYSIWYG editors.
+ + Added navigation bar to help make admin area more friendly to use.
+ + Added the same display options for category description text as already 
+   exists for articles (disable html, smilies, line breaks, etc.)
+ + Added new category notification option.
+ + Added status icon for each article/category in admin (shows whether published
+   or not)
+ ! Fixed "articles views" not being shown when index page in threaded mode.
+
+
+Articles v0.19:
+===============
+ 
+ + Added submit article page for site users.
+ o Changed "edit" and "delete" text in article and category admin for 
+   icons, which allows more space for text in other columns (such as the
+   title).
+ o Started moving preferences to system generated prefs.
+  
+ 
+Articles v0.18:
+===============
+
+ o Changed from the short PHP tag style in some admin and print.php files
+   to prevent problems on servers where this feature has been disabled.
+ o Added error message when non-existant article ID called.
+ o Various other small changes (yes, I have been remiss in keeping track of
+   changes, naughty me).
+ + Added language constants to print.php
+
+ 
+Articles v0.17:
+===============
+
+ ! Changed category and article title display options to prevent potential
+   problems with them being garbled on some sites.
+ ! email to friend feature would barf if you were using a version of PHP
+   older than 4.3.0 due to "html_entity_decode" not being supported.
+   Added my own function with some of the more common HTML entities to 
+   support older versions of PHP. 
+  
+
+Articles v0.16:
+===============
+
+ + Implemented XOOPs internal notification system for when new Articles are
+   added. 
+ + Added error message for when a requested article does not exist. 
+ 
+ 
+Articles v0.15: (not publically released):
+===============
+
+ + Added more descriptive "Latest Articles" and "Popular Articles" blocks.
+   These have been designed more for use in the centre sections, rather 
+   than side bars.
+ ! Fixed comments bug where the wrong title was inserted when replying or
+   posting a new comment.
+ o Changed email to friend feature to use XOOPs' own internal mailer for 
+   compatibility. 
+
+ 
+Articles v0.14: (not publically released):
+===============
+
+ ! Fixed new comments title bug.
+ ! Fixed "e-mail to friend" feature not actually sending e-mails (oops).
+
+ 
+Articles v0.12: 
+===============
+
+ ! Links to articles would break when block viewed from another module. The
+   links have now been hard coded, as they seem to be in other blocks.
+ o Changed the way the article description "cut-off" is handled in article
+   admin.
+ o Added "No articles" message to article list admin.
+ 
+ 
+Articles v0.11: (not publically released):
+===============
+ 
+ + Added "latest articles" block.
+ + Added "popular articles" block. 
+ 
+
+Articles v0.10: (not publically released):
+===============
+ 
+ ! Fixed HTML in admin's article description breaking table.
+ o Added language constants for drop down lists in prefs and article 
+   admin forms.
+ + Added "email to friend" feature, and its relevant preferences.
+ + Added ability to hide/show number of article reads on index and article
+   pages, as well as hide/show "posted on" in articles. 
+   
+ 
+Articles v0.09:
+===============
+
+ ! Fixed problems with showing special/extended characters in article and 
+   category title input text box when editing.
+ ! A few minor changes to prevent possible problems.
+ 
+ 
+Articles v0.08 (not publically released):
+===============
+ 
+ + Added a "flat" or "threaded" view option to the index page where you can
+   choose to either show categories and article listings, or just categories
+   with sub-links to article lists.
+ + Added general prefs page with option for above, as well as option to change
+   the background colour of the article text table.
+ o Updated database update script for this version.
+ o Various minor changes and stuff. 
+ 
+
+Articles v0.07 (not publically released):
+===============
+
+ ! Cleaned up "undefined variables" in category admin.
+ ! Cleaned up "undefined variables" in article admin.
+ ! Fixed disable html/smilies/codes not inserting into database when adding a
+   new article.
+ + Author's/Poster's UID now stored in database (for future use).
+ + Fully implemented Xoops' "displayTarea" function, so main article text will 
+   now enable/disable: HTML tags, Smilies, Xoops codes, images and auto line 
+   break conversion (on a "per article" basis and not for all).
+ ! fixed a bug in article admin list table being broken. 
+ 
+ 
+Articles v0.06:
+===============
+ 
+ + Printable version of page added.
+ o Admin Index page cleaned up and updated - text can now be localised in 
+   language/admin.php.
+ o Yet more minor changes.
+ + Article views caption text localised on index page.
+ + "Posted on" and "reads" localised on main article page.
+  
+ 
+Articles v0.05 (not publically released):
+===============
+
+ + Implemented Xoops searching system. The article title, description and
+   the actual article text will be searched.
+ + French translation added - thanks to Hervé Thouzard.
+ o Several minor changes made.
+ 
+Articles v0.04:
+===============
+
+ o Changed font on admin icon to the same as used on Xoops' icons (bit3).
+ o Added "Pencil" to the logo.
+ o Changed module description to reflect current name.
+ + Implemented comments.
+ + Added category names in article listing - due to space limitations, the
+   category ID is shown, but a "tooltip" system is used to show the category
+   name. I have used "AltText" by Brian Gosselin of http://www.scriptasylum.com
+ + Hard-coded article background colour to prevent article text being "washed
+   out" by theme background colours. The background colour will eventually be a
+   preferences option, but for now it can be changed in the "article_item.html"
+   template.
+ 
+Articles v0.03:
+===============
+
+ o Changed Category editor to internal Xoops editor.
+ + Added category "Order" column in list of categories
+ + Changed "main.php" include to accept other language files if they exist.
+ + Added alternating row colours for category listing (in admin).
+ + Added alternating row colours for article listing (in admin).
+ ! Made a temporary fix for category listing/selection bug when editing articles.
+ + Article list in admin now lists articles by category, then its weight/order.
+ ! Categories can now be hidden on user listing.
+ + Added category ID column to the article listing.
+ + Added width attributes to the article listing template, so looks tidier.
+ o Loads of small changes.
+ 
+Articles v0.02:
+===============
+ 
+ o First public release.
+ o Too much to list as still being "put together" - changes will be listed 
+   after this version.
+
+Articles v0.01:
+===============
+
+ This is the fist development version and was never released to the public.
+ This version has too many changes to list here.
+
+
+

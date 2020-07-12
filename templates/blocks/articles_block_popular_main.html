@@ -1,0 +1,12 @@
+<table>
+<{foreach item=artspop from=$block.artspop}>
+  <tr>
+    <td class="<{$artspop.class}>">
+      <a href="<{$xoops_url}>/modules/articles/article.php?id=<{$artspop.id}>"><{$artspop.title}></a> 
+      <span style="font-size: smaller;">[<{$artspop.art_views}>]</span>
+      <br />
+      <{$artspop.text}>
+    </td>
+  </tr>    
+<{/foreach}>
+</table>
